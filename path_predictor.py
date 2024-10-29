@@ -1,6 +1,9 @@
+pip install nltk
+pip install -U scikit-learn
+
 import streamlit as st
 import pandas as pd
-import spacy
+# import spacy
 import nltk
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
@@ -17,6 +20,7 @@ descrip = pd.read_csv("major_description.csv", delimiter=';')
 salary = pd.read_csv("salary.csv")
 
 nltk.download('punkt')
+nltk.download('punkt_tab')
 nltk.download('stopwords')
 nltk.download('wordnet')
 

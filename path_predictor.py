@@ -119,7 +119,9 @@ def main():
         # st.subheader("Combined Recommendations")
         st.subheader("Recommendations")
         # columns_to_display = ['major', 'combined_score']
-        columns_to_display = ['major', 'description_knn', 'rough salary (can highly vary)_knn']
+        merged_recommendations.rename(columns={'description_knn': 'description'}, inplace=True)
+        merged_recommendations.rename(columns={'rough salary (can highly vary)_knn': 'rough salary (can highly vary)'}, inplace=True)
+        columns_to_display = ['major', 'description', 'rough salary (can highly vary)']
         st.table(merged_recommendations[columns_to_display])
 
         st.subheader("Jobs Recommendations")

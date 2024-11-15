@@ -81,7 +81,7 @@ def main():
     grade = st.number_input("What is your current grade level?", min_value=1, max_value=12)
     subject = st.selectbox("Which subject do you enjoy the most?",
                            options=["Math", "English", "History", "Foreign Languages",
-                                    "Computer Science", "Chemistry", "Physics", "Biology", "Art". "Geography"])
+                                    "Computer Science", "Chemistry", "Physics", "Biology", "Art", "Geography"])
     hobby = st.selectbox("What is your main hobby or interest?",
                          options=["Reading and Writing", "Coding", "Drawing and Painting",
                                   "Cooking", "Gardening", "Teaching Others"])
